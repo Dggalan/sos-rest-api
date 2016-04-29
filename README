@@ -1,49 +1,218 @@
-# sos-rest-api
+# REST API DOCUMENTATION (v0.0.1)
 
-First Sos-rest-api readme file
+Name: sos-rest-api
+
+version: 1.0.0<br>
+-
+</br>
 
 Methods:
-addFriend
- def username = data?.username
-        def password = data?.password
-        def username2 = data?.username2
-addUser
-tring username = data?.username
-        String name = data?.name
-        String password = data?.password
-deleteFriend
- def username = data?.username
-        def password = data?.password
-        def username2 = data?.username2
-deletePost
-def postID = data?.postID
-        def username = data?.username
-        def password = data?.password
-deleteUser
-def username = data?.username
-        def password = data?.password
-editPost
- def postID = data?.postID
-        def username = data?.username
-        def password = data?.password
-               def post = data?.post
-getFriends
- def username = data?.username
-getPostNumber
-def username = data?.username
-        def password = data?.password
-getPosts
- def username = data?.username
-        def password = data?.password
-        def username2 = data?.username2
-        def startDate = data?.startDate
-        def endDate = data?.endDate
-        def quantity = data?.quantity
-publishPost
- String username = data?.username
-        String password = data?.password
-        String post = data?.post
 
-searchFriend
- def username = data?.username
-userList
+This is the list of different methods ofered by the api 
+
+##addFriend
+### Method: POST
+### Resource URL: /api/addFriend
+
+### Description
+
+This method establishes a friendship relation of two users.
+
+### parameters
+
+| Atribute			| Type 			| Description                 | Optionality | 
+| -------------  	|---------------	| -------------               |------------ |
+| <b>username</b>		| string 			| The username registered | Mandatory   |
+| <b>password</b>		| string 			| The password registered | Mandatory   |
+| <b>username2</b>		| string 			| The username of the friend| Mandatory   |
+
+
+
+##addUser
+### Method: POST
+### Resource URL: /api/addUser
+
+### Description
+
+This method adds a user.
+
+### parameters
+
+| Atribute			| Type 			| Description                 | Optionality | 
+| -------------  	|---------------	| -------------               |------------ |
+| <b>username</b>		| string 			| The username registered | Mandatory / Unique  |
+| <b>name</b>		| string 			| The name/nick of the user| Mandatory   |
+| <b>password</b>		| string 			| The password registered | Mandatory   |
+
+
+##deleteFriend
+### Method: POST
+### Resource URL: /api/deleteFriend
+
+### Description
+
+This method deletes a frienship relation of two users.
+
+### parameters
+
+| Atribute			| Type 			| Description                 | Optionality | 
+| -------------  	|---------------	| -------------               |------------ |
+| <b>username</b>		| string 			| The username registered | Mandatory  |
+| <b>password</b>		| string 			| The password registered | Mandatory   |
+| <b>username2</b>		| string 			| The username of the friend| Mandatory   |
+
+
+
+##deletePost
+### Method: POST
+### Resource URL: /api/deletePost
+
+### Description
+
+This method deletes a post.
+
+### parameters
+
+| Atribute			| Type 			| Description                 | Optionality | 
+| -------------  	|---------------	| -------------               |------------ |
+| <b>username</b>		| string 			| The username registered | Mandatory  |
+| <b>password</b>		| string 			| The password registered | Mandatory   |
+| <b>postID</b>		| string 			| The postID of the Post at DB| Mandatory   |
+
+
+##deleteUser
+### Method: POST
+### Resource URL: /api/deleteUser
+
+### Description
+
+This method deletes a User.
+
+### parameters
+
+| Atribute			| Type 			| Description                 | Optionality | 
+| -------------  	|---------------	| -------------               |------------ |
+| <b>username</b>		| string 			| The username registered | Mandatory  |
+| <b>password</b>		| string 			| The password registered | Mandatory   |
+
+
+
+
+##editPost
+### Method: POST
+### Resource URL: /api/editPost
+
+### Description
+
+This method edites a Post.
+
+### parameters
+
+| Atribute			| Type 			| Description                 | Optionality | 
+| -------------  	|---------------	| -------------               |------------ |
+| <b>username</b>		| string 			| The username registered | Mandatory  |
+| <b>password</b>		| string 			| The password registered | Mandatory   |
+| <b>postID</b>		| string 			| The postID of the Post at DB| Mandatory   |
+| <b>post</b>		| string 			| The message of the Post | Mandatory   |
+
+
+
+##getFriends
+### Method: POST
+### Resource URL: /api/getFriends
+
+### Description
+
+This method returns the list of friends of a user.
+
+### parameters
+
+| Atribute			| Type 			| Description                 | Optionality | 
+| -------------  	|---------------	| -------------               |------------ |
+| <b>username</b>		| string 			| The username registered | Mandatory  |
+
+
+##getPostNumber
+### Method: POST
+### Resource URL: /api/getPostNumber
+
+### Description
+
+This method returns the number of post of a user
+
+### parameters
+
+| Atribute			| Type 			| Description                 | Optionality | 
+| -------------  	|---------------	| -------------               |------------ |
+| <b>username</b>		| string 			| The username registered | Mandatory  |
+| <b>password</b>		| string 			| The password registered | Mandatory   |
+
+
+
+
+##getPosts
+### Method: POST
+### Resource URL: /api/getPosts
+
+### Description
+
+This method returns the number of post of a user
+
+### parameters
+
+| Atribute			| Type 			| Description                 | Optionality | 
+| -------------  	|---------------	| -------------               |------------ |
+| <b>username</b>		| string 			| The username registered | Mandatory  |
+| <b>password</b>		| string 			| The password registered | Mandatory   |
+| <b>username2</b>		| string 			| The username who we want the posts | Mandatory   |
+| <b>startDate</b>		| string 			| The Date from when we want the posts | Optional   |
+| <b>endDate</b>		| string 			| The Date to when we want the posts | Optional   |
+| <b>quantity</b>		| string 			| The quantity of posts we want| Optional   |
+
+
+
+##publishPost
+### Method: POST
+### Resource URL: /api/publishPost
+
+### Description
+
+This method publish a post
+
+### parameters
+
+| Atribute			| Type 			| Description                 | Optionality | 
+| -------------  	|---------------	| -------------               |------------ |
+| <b>username</b>		| string 			| The username registered | Mandatory  |
+| <b>password</b>		| string 			| The password registered | Mandatory   |
+| <b>post</b>		| string 			| The message of the Post | Mandatory   |
+
+
+
+##searchFriend
+### Method: POST
+### Resource URL: /api/searchFriend
+
+### Description
+
+This method returns the user we are searching, or a list with the possible ones
+
+### parameters
+
+| Atribute			| Type 			| Description                 | Optionality | 
+| -------------  	|---------------	| -------------               |------------ |
+| <b>username</b>		| string 			| The username registered | Mandatory  |
+
+
+##userList
+### Method: GET
+### Resource URL: /api/userList
+
+### Description
+
+This method returns the a list of all the users
+
+### parameters
+
+No parameters|
+
