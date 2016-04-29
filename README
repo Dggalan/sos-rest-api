@@ -1,3 +1,49 @@
 # sos-rest-api
 
 First Sos-rest-api readme file
+
+Methods:
+addFriend
+ def username = data?.username
+        def password = data?.password
+        def username2 = data?.username2
+addUser
+tring username = data?.username
+        String name = data?.name
+        String password = data?.password
+deleteFriend
+ def username = data?.username
+        def password = data?.password
+        def username2 = data?.username2
+deletePost
+def postID = data?.postID
+        def username = data?.username
+        def password = data?.password
+deleteUser
+def username = data?.username
+        def password = data?.password
+editPost
+ def postID = data?.postID
+        def username = data?.username
+        def password = data?.password
+               def post = data?.post
+getFriends
+ def username = data?.username
+getPostNumber
+def username = data?.username
+        def password = data?.password
+getPosts
+ def username = data?.username
+        def password = data?.password
+        def username2 = data?.username2
+        def startDate = data?.startDate
+        def endDate = data?.endDate
+        def quantity = data?.quantity
+publishPost
+ String username = data?.username
+        String password = data?.password
+        String post = data?.post
+
+searchFriend
+ def username = data?.username
+userList
